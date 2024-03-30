@@ -3,7 +3,7 @@ import CollectionSpotlight from "@/components/collectionSpotlight/CollectionSpot
 
 const HomePage = () => {
   return (
-    <div className="w-[1250px] mx-auto space-y-10">
+    <div className="max-w-[1250px] mx-auto space-y-10">
       <Sports />
       <CollectionSpotlight />
     </div>
