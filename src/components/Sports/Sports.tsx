@@ -10,41 +10,36 @@ import "./sports.css"
 import { IoMdSunny } from "react-icons/io";
 import { FaMoon } from "react-icons/fa";
 
-const Sports = () => {
+interface SportsProps {
+    isDarkMode: boolean;
+    toggleTheme: () => void;
+}
+const Sports: React.FC<SportsProps> = ({ isDarkMode, toggleTheme }) => {
     return (
-        <div className="py-8">
+        <div className="py-8 px-5">
             <div className="flex justify-between items-center">
-                {/* {isDarkMode ? (
-                    <IoMdSunny
-                        className={`w-6 h-6 hover:cursor-pointer ${isDarkMode
-                            ? "text-white"
-                            : `${location.pathname === "/"
-                                ? "text-white"
-                                : "text-gray-900"
-                            }`
-                            }`}
-                        onClick={toggleTheme}
-                    ></IoMdSunny>
-                ) : (
-                    <FaMoon
-                        className={`w-6 h-6 hover:cursor-pointer ${isDarkMode ? "text-white" : "text-gray-900"
-                            }`}
-                        onClick={toggleTheme}
-                    ></FaMoon>
-                )} */}
                 <span className="font-bold text-2xl border-b-[3px] border-[#738FFF]">Sports</span>
                 <span>
-                    <IoMdSunny />
-                    <FaMoon />
+                    {isDarkMode ? (
+                        <IoMdSunny
+                            className={`w-6 h-6 hover:cursor-pointer text-white`}
+                            onClick={toggleTheme}
+                        />
+                    ) : (
+                        <FaMoon
+                            className={`w-6 h-6 hover:cursor-pointer text-gray-900`}
+                            onClick={toggleTheme}
+                        />
+                    )}
                 </span>
             </div>
-            <div className="grid md:grid-cols-5 gap-4 mt-8 sm:grid-cols-3 grid-cols-1">
+            <div className="grid md:grid-cols-5 md:gap-4 gap-10 mt-8 sm:grid-cols-3 grid-cols-1">
                 {/* card 1 */}
                 <div className="bg-white p-2">
-                    <Image className="" width={500} height={500} src={player_1} alt="Player 1"></Image>
+                    <Image width={500} height={500} src={player_1} alt="Player 1"></Image>
                     <div className="space-y-4 mt-3">
-                        <h4 className="font-bold">Sacramento River Cats</h4>
-                        <div className="card-body bg-[#F7F7F8] p-2 sm:flex justify-between items-center gap-5">
+                        <h4 className="font-bold md:text-left text-center">Sacramento River Cats</h4>
+                        <div className="card-body bg-[#F7F7F8] p-2 flex justify-between items-center gap-5">
                             <div className="flex-1">
                                 <p>Total Events</p>
                                 <p className="font-semibold">48 Events</p>
@@ -58,7 +53,7 @@ const Sports = () => {
                 </div>
                 {/* card 2 */}
                 <div className="bg-white p-2">
-                    <Image height={385} src={player_2} alt="Player 1" />
+                    <Image width={500} height={385} src={player_2} alt="Player 1" />
                     <div className="space-y-4 mt-3">
                         <h4 className="font-bold">Las Vegas Aviators</h4>
                         <div className="card-body bg-[#F7F7F8] p-2 flex justify-between items-center gap-5">
@@ -75,7 +70,7 @@ const Sports = () => {
                 </div>
                 {/* card 3 */}
                 <div className="bg-white p-2">
-                    <Image height={385} src={player_3} alt="Player 1" />
+                    <Image width={500} height={385} src={player_3} alt="Player 1" />
                     <div className="space-y-4 mt-3">
                         <h4 className="font-bold">New Jersey Devils</h4>
                         <div className="card-body bg-[#F7F7F8] p-2 flex justify-between items-center gap-5">
@@ -92,7 +87,7 @@ const Sports = () => {
                 </div>
                 {/* card 4 */}
                 <div className="bg-white p-2">
-                    <Image height={385} src={player_1} alt="Player 1" />
+                    <Image width={500} height={385} src={player_1} alt="Player 1" />
                     <div className="space-y-4 mt-3">
                         <h4 className="font-bold">Sacramento River Cats</h4>
                         <div className="card-body bg-[#F7F7F8] p-2 flex justify-between items-center gap-5">
@@ -109,7 +104,7 @@ const Sports = () => {
                 </div>
                 {/* card 1 */}
                 <div className="bg-white p-2 h-full">
-                    <Image height={220} src={player_4} alt="Player 1" />
+                    <Image width={500} height={220} src={player_4} alt="Player 1" />
                     <div className="space-y-4 mt-3">
                         <h4 className="font-bold">Advertisement title</h4>
                         <p className="">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
