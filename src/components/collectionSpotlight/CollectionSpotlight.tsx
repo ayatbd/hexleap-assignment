@@ -12,49 +12,56 @@ interface CProps {
 
 const CollectionSpotlight: React.FC<CProps> = ({ isDarkMode }) => {
 
-    // data for the collection spotlight 
-    const datas = [
-        {
-            "id": "1",
-            "image": "https://i.ibb.co/zrHfxK7/Ticket-Mockup-1.png",
-            "field": "Las Vegas Aviators",
-            "time": "Oct 16 | Sun | 4:30pm",
-            "place": "Las Vegas Ballpark, Las Vegas, Nevada",
-            "button_text": "Take Flight Collection"
-        },
-        {
-            "id": "2",
-            "image": "https://i.ibb.co/zrHfxK7/Ticket-Mockup-1.png",
-            "field": "Las Vegas Aviators",
-            "time": "Oct 16 | Sun | 4:30pm",
-            "place": "Las Vegas Ballpark, Las Vegas, Nevada",
-            "button_text": "Take Flight Collection"
-        },
-        {
-            "id": "3",
-            "image": "https://i.ibb.co/zrHfxK7/Ticket-Mockup-1.png",
-            "field": "Las Vegas Aviators",
-            "time": "Oct 16 | Sun | 4:30pm",
-            "place": "Las Vegas Ballpark, Las Vegas, Nevada",
-            "button_text": "Take Flight Collection"
-        },
-        {
-            "id": "4",
-            "image": "https://i.ibb.co/zrHfxK7/Ticket-Mockup-1.png",
-            "field": "Las Vegas Aviators",
-            "time": "Oct 16 | Sun | 4:30pm",
-            "place": "Las Vegas Ballpark, Las Vegas, Nevada",
-            "button_text": "Take Flight Collection"
-        },
-        {
-            "id": "5",
-            "image": "https://i.ibb.co/zrHfxK7/Ticket-Mockup-1.png",
-            "field": "Las Vegas Aviators",
-            "time": "Oct 16 | Sun | 4:30pm",
-            "place": "Las Vegas Ballpark, Las Vegas, Nevada",
-            "button_text": "Take Flight Collection"
-        }
-    ];
+    // data for the collection spotlight
+    const datas: {
+        id: string;
+        image: string;
+        field: string;
+        time: string;
+        place: string;
+        button_text: string;
+    }[] = [
+            {
+                "id": "1",
+                "image": "https://i.ibb.co/zrHfxK7/Ticket-Mockup-1.png",
+                "field": "Las Vegas Aviators",
+                "time": "Oct 16 | Sun | 4:30pm",
+                "place": "Las Vegas Ballpark, Las Vegas, Nevada",
+                "button_text": "Take Flight Collection"
+            },
+            {
+                "id": "2",
+                "image": "https://i.ibb.co/zrHfxK7/Ticket-Mockup-1.png",
+                "field": "Las Vegas Aviators",
+                "time": "Oct 16 | Sun | 4:30pm",
+                "place": "Las Vegas Ballpark, Las Vegas, Nevada",
+                "button_text": "Take Flight Collection"
+            },
+            {
+                "id": "3",
+                "image": "https://i.ibb.co/zrHfxK7/Ticket-Mockup-1.png",
+                "field": "Las Vegas Aviators",
+                "time": "Oct 16 | Sun | 4:30pm",
+                "place": "Las Vegas Ballpark, Las Vegas, Nevada",
+                "button_text": "Take Flight Collection"
+            },
+            {
+                "id": "4",
+                "image": "https://i.ibb.co/zrHfxK7/Ticket-Mockup-1.png",
+                "field": "Las Vegas Aviators",
+                "time": "Oct 16 | Sun | 4:30pm",
+                "place": "Las Vegas Ballpark, Las Vegas, Nevada",
+                "button_text": "Take Flight Collection"
+            },
+            {
+                "id": "5",
+                "image": "https://i.ibb.co/zrHfxK7/Ticket-Mockup-1.png",
+                "field": "Las Vegas Aviators",
+                "time": "Oct 16 | Sun | 4:30pm",
+                "place": "Las Vegas Ballpark, Las Vegas, Nevada",
+                "button_text": "Take Flight Collection"
+            }
+        ];
 
     return (
         <div className={`mx-auto ${isDarkMode ? 'dark' : ''}`}>
