@@ -1,10 +1,14 @@
 "use client"
 import Image from "next/image";
+
+// swiper imports
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import { Navigation } from 'swiper/modules';
-import './style.css';
+
+// css file 
+import './CollectionSpotlight.css';
 
 interface CProps {
     isDarkMode: boolean;
@@ -64,21 +68,21 @@ const CollectionSpotlight: React.FC<CProps> = ({ isDarkMode }) => {
         ];
 
     return (
-        <div className={`mx-auto ${isDarkMode ? 'dark' : ''}`}>
-            <div className="md:p-[77px] p-[30px] space-y-14">
+        <div className={`mx-auto ${isDarkMode ? 'bg-slate-900' : ''}`}>
+            <div className="md:p-[77px] sm:p-[30px] p-2 space-y-14">
                 <div className="text-center space-y-7">
                     <h1 className={`text-[40px] font-bold ${isDarkMode ? 'text-white' : ''}`}>Collection Spotlight</h1>
                     <p className={`${isDarkMode ? 'text-white' : ''}`}>Discover extraordinary moments with our Spotlight Collection metatickets—exclusive access to premium events for an unforgettable experience. Grab yours today!</p>
                 </div>
 
-                <div className="md:block hidden">
+                <div className="lg:block hidden">
                     <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
                         {datas.map((data, index) => index % 3 === 0 && (
                             <SwiperSlide key={data.id}>
-                                <div className="px-20 grid md:grid-cols-3 grid-cols-1 gap-8 bg-[#e7e7e7]">
+                                <div className={`px-20 grid lg:grid-cols-3 grid-cols-1 gap-8 ${isDarkMode ? "bg-slate-900" : "bg-[#e7e7e7]"}`}>
                                     {datas.slice(index, index + 3).map((cardData) => (
                                         <div key={cardData.id}>
-                                            <div className={`bg-white border-scoop ${isDarkMode ? 'dark:bg-gray-800' : ''}`}>
+                                            <div className={` ${isDarkMode ? 'bg-slate-800' : 'bg-white border-scoop'}`}>
                                                 <div className="divide-y-2 divide-dashed p-5">
                                                     <div className="card-image pb-4">
                                                         <Image className="h-[400px] w-full" width={500} height={500} src={cardData.image} alt="" />
@@ -99,11 +103,11 @@ const CollectionSpotlight: React.FC<CProps> = ({ isDarkMode }) => {
                     </Swiper>
                 </div>
 
-                <div className="block md:hidden">
+                <div className="block lg:hidden">
                     <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
                         {datas.map((data) => (
-                            <SwiperSlide key={data.id}>
-                                <div className={`bg-white border-scoop ${isDarkMode ? 'dark:bg-gray-800' : ''}`}>
+                            <SwiperSlide className={`${isDarkMode ? "bg-slate-900" : ""}`} key={data.id}>
+                                <div className={` ${isDarkMode ? 'bg-slate-800' : 'bg-white border-scoop'}`}>
                                     <div className="divide-y-2 divide-dashed p-5">
                                         <div className="card-image pb-4">
                                             <Image className="h-[400px] w-full" width={500} height={500} src={data.image} alt="" />

@@ -16,9 +16,9 @@ interface SportsProps {
 }
 const Sports: React.FC<SportsProps> = ({ isDarkMode, toggleTheme }) => {
     return (
-        <div className="py-8 px-5">
+        <div className="py-8 sm:px-5 px-2">
             <div className="flex justify-between items-center">
-                <span className={`font-bold text-2xl border-b-[3px] border-[#738FFF] ${isDarkMode && "text-white border-[#2c3041]"}`}>Sports</span>
+                <span className={`font-bold text-2xl border-b-[3px] ${isDarkMode ? "text-white border-slate-700" : "border-[#738FFF]"}`}>Sports</span>
                 <span>
                     {isDarkMode ? (
                         <IoMdSunny
@@ -33,9 +33,9 @@ const Sports: React.FC<SportsProps> = ({ isDarkMode, toggleTheme }) => {
                     )}
                 </span>
             </div>
-            <div className="grid md:grid-cols-5 md:gap-4 gap-10 mt-8 sm:grid-cols-3 grid-cols-1">
+            <div className="grid lg:grid-cols-5 md:gap-4 gap-10 mt-8 md:grid-cols-3 grid-cols-1">
                 {/* card 1 */}
-                <div className={`bg-white p-2 ${isDarkMode ? 'bg-gray-800' : ''}`}>
+                <div className={`p-2 ${isDarkMode ? 'bg-gray-800' : 'bg-white'}`}>
                     <Image width={500} height={500} src={player_1} alt="Player 1"></Image>
                     <div className="space-y-4 mt-3">
                         <h4 className={`font-bold ${isDarkMode ? 'text-white' : 'md:text-left text-center'}`}>Sacramento River Cats</h4>
@@ -52,7 +52,7 @@ const Sports: React.FC<SportsProps> = ({ isDarkMode, toggleTheme }) => {
                     </div>
                 </div>
                 {/* card 2 */}
-                <div className={`bg-white p-2 ${isDarkMode ? 'bg-gray-800' : ''}`}>
+                <div className={`p-2 ${isDarkMode ? 'bg-gray-800' : 'bg-white'}`}>
                     <Image width={500} height={385} src={player_2} alt="Player 1" />
                     <div className="space-y-4 mt-3">
                         <h4 className={`font-bold ${isDarkMode ? 'text-white' : 'md:text-left text-center'}`}>Las Vegas Aviators</h4>
@@ -69,7 +69,7 @@ const Sports: React.FC<SportsProps> = ({ isDarkMode, toggleTheme }) => {
                     </div>
                 </div>
                 {/* card 3 */}
-                <div className={`bg-white p-2 ${isDarkMode ? 'bg-gray-800' : ''}`}>
+                <div className={`p-2 ${isDarkMode ? 'bg-gray-800' : 'bg-white'}`}>
                     <Image width={500} height={385} src={player_3} alt="Player 1" />
                     <div className="space-y-4 mt-3">
                         <h4 className={`font-bold ${isDarkMode ? 'text-white' : 'md:text-left text-center'}`}>New Jersey Devils</h4>
@@ -86,7 +86,7 @@ const Sports: React.FC<SportsProps> = ({ isDarkMode, toggleTheme }) => {
                     </div>
                 </div>
                 {/* card 4 */}
-                <div className={`bg-white p-2 ${isDarkMode ? 'bg-gray-800' : ''}`}>
+                <div className={`p-2 ${isDarkMode ? 'bg-gray-800' : 'bg-white'}`}>
                     <Image width={500} height={385} src={player_1} alt="Player 1" />
                     <div className="space-y-4 mt-3">
                         <h4 className={`font-bold ${isDarkMode ? 'text-white' : 'md:text-left text-center'}`}>Sacramento River Cats</h4>
@@ -103,7 +103,7 @@ const Sports: React.FC<SportsProps> = ({ isDarkMode, toggleTheme }) => {
                     </div>
                 </div>
                 {/* card 1 */}
-                <div className={`bg-white p-2 ${isDarkMode ? 'bg-gray-800' : ''}`}>
+                <div className={`p-2 ${isDarkMode ? 'bg-gray-800' : 'bg-white'}`}>
                     <Image width={500} height={220} src={player_4} alt="Player 1" />
                     <div className="space-y-4 mt-3">
                         <h4 className={`font-bold ${isDarkMode ? 'text-white' : 'md:text-left text-center'}`}>Advertisement title</h4>
